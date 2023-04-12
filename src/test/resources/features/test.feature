@@ -30,5 +30,3 @@ Feature: automate the endpoints of the https://reqres.in/ site
   Scenario: the user consults the information of a user
     When the user consults a user
     Then the user will see the next code 200
-
-    
