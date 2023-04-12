@@ -1,0 +1,24 @@
+utils/Constans.java
+ utils.Constans
+task/EditUser.java
+ task.EditUser
+task/NewUser.java
+ task.NewUser
+utils/DataFakeGenerate.java
+ utils.DataFakeGenerate
+models/builders/UserModelBuilder.java
+ models.builders.UserModelBuilder
+models/Users.java
+ models.Users
+models/Token.java
+ models.Token
+task/GenerateToken.java
+ task.GenerateToken
+models/builders/TokenModelBuilder.java
+ models.builders.TokenModelBuilder
+task/RegisterUnsuccessful.java
+ task.RegisterUnsuccessful
+task/DeleteUser.java
+ task.DeleteUser
+task/SummaryUser.java
+ task.SummaryUser

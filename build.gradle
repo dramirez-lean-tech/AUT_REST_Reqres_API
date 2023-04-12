@@ -1,0 +1,69 @@
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Test){
+    systemProperties = System.properties
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.48")
+    }
+}
+
+ext{
+    serenityVersion = '2.0.48'
+    serenityCucumberVersion = '1.9.40'
+}
+
+dependencies {
+
+    compile group: 'com.microsoft.azure', name: 'adal4j', version: '1.6.4'
+    compile group: 'com.microsoft.rest', name: 'client-runtime', version: '1.7.5'
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
+    testImplementation "net.serenity-bdd:serenity-core:2.0.70"
+    testImplementation "net.serenity-bdd:serenity-junit:2.0.70"
+    implementation "net.serenity-bdd:serenity-screenplay:2.0.70"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:2.0.70"
+    implementation "net.serenity-bdd:serenity-cucumber:1.9.51"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:2.0.70"
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '8.2.2.jre8'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.8.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.21'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    compile group: 'org.json', name: 'json', version: '20180813'
+    compile group: 'org.everit.json', name: 'org.everit.json.schema', version: '1.5.1'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.15'
+    compile group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+    implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.6.0'
+
+}
+
+
+test {
+    systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
+}
+
+test.ignoreFailures=true
+test.finalizedBy(aggregate, reports)
+

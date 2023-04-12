@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"automate the endpoints of the https://reqres.in/ site","the user created a new user","SUCCESS","2023-04-12T10:03:16.225-05:00[America/Bogota]","0.0","4.79"
+"automate the endpoints of the https://reqres.in/ site","the user updated a user","SUCCESS","2023-04-12T10:03:21.026-05:00[America/Bogota]","0.0","1.42"
+"automate the endpoints of the https://reqres.in/ site","the user does not register properly","SUCCESS","2023-04-12T10:03:22.452-05:00[America/Bogota]","0.0","1.4"
+"automate the endpoints of the https://reqres.in/ site","the user deleted a user","SUCCESS","2023-04-12T10:03:23.858-05:00[America/Bogota]","0.0","1.38"
+"automate the endpoints of the https://reqres.in/ site","the user consults the information of a user","SUCCESS","2023-04-12T10:03:25.245-05:00[America/Bogota]","0.0","1.13"
