@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features="src/test/resources/features/test.feature",
         glue= "stepdefinitions",
-        tags= "@All")
+        tags= "@AllCases")
 
 public class UserRunner {
 }

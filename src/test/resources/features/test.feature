@@ -1,6 +1,6 @@
 #author: Diego Ramirez
 
-@All
+@AllCases
 Feature: automate the endpoints of the https://reqres.in/ site
 
   Background:
