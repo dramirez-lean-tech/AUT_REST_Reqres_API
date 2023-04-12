@@ -28,8 +28,7 @@ src/test/java/stepdefinitions/SetupConfiguration.java
 src/test/java/runners/Runner.java
 ```
 ## Run Test
-The user wants to shop for the Samsung TV from the Amazon store website
-- the test case, approximate 44 seconds run time 
+The user create, update, delete and getting data from some endpoints
 ```
 gradle :clean :test --tests "runners.Runner" :aggregate
 ```
