@@ -47,7 +47,6 @@ public class UsersStepDefinition {
         AdminApi.attemptsTo(summaryUser());
     }
 
-
     @Then("^the user will see the next code (.*)$")
     public void the_user_will_see_the_next_code(int code) {
         AdminApi.should(seeThatResponse(lastResponse -> lastResponse.statusCode(code)));
