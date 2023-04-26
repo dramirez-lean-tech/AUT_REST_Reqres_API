@@ -27,6 +27,11 @@ public class UsersStepDefinition {
          AdminApi.attemptsTo(newUser());
     }
 
+    @When("^the user create a new user two$")
+    public void the_user_create_a_new_user_two() {
+        AdminApi.attemptsTo(newUser());
+    }
+
     @When("^the user update a user$")
     public void the_user_update_a_user() {
         AdminApi.attemptsTo(userEdited());

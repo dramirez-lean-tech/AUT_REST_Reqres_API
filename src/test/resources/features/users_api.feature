@@ -11,6 +11,11 @@ Feature: automate the endpoints of the https://reqres.in/ site
     When the user create a new user
     Then the user will see the next code 201
 
+  @UserCreated2
+  Scenario: the user created a new user
+    When the user create a new user two
+    Then the user will see the next code 201
+
   @UserUpdated
   Scenario: the user updated a user
     When the user update a user
