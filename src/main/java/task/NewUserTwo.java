@@ -28,7 +28,7 @@ public class NewUserTwo implements Task {
         System.out.println("------------");
     }
 
-    public static NewUserTwo newUser(){
+    public static NewUserTwo newUserTwo(){
         return instrumented(NewUserTwo.class);
 }
 }

@@ -11,6 +11,7 @@ import static task.DeleteUser.userDeleted;
 import static task.EditUser.userEdited;
 import static task.GenerateToken.createToken;
 import static task.NewUser.newUser;
+import static task.NewUserTwo.newUserTwo;
 import static task.RegisterUnsuccessful.unsuccessful;
 import static task.SummaryUser.summaryUser;
 
@@ -28,9 +29,7 @@ public class UsersStepDefinition {
     }
 
     @When("^the user create a new user two$")
-    public void the_user_create_a_new_user_two() {
-        AdminApi.attemptsTo(newUser());
-    }
+    public void the_user_create_a_new_user_two() {AdminApi.attemptsTo(newUserTwo());}
 
     @When("^the user update a user$")
     public void the_user_update_a_user() {
